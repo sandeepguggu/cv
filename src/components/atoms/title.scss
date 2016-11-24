@@ -1,0 +1,26 @@
+.title {
+  color: #FFF;
+
+  .name {
+    margin-bottom: 1.25rem;
+    font-size: 2.82rem;
+    letter-spacing: 1rem;
+    font-weight: 600;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  .role {
+    margin-top: 1.42rem;
+    font-size: 4.24rem;
+    font-weight: 100;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  .divider {
+    width: 24.12rem;
+    margin: 0 auto;
+    border-bottom: 1px solid rgb(82, 237, 199);
+  }
+}

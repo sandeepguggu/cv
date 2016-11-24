@@ -1,0 +1,40 @@
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+
+  .progress-circle {
+    margin: 0;
+    .wrap {
+      position: relative;
+      width: 11rem;
+      margin: 0 auto;
+    }
+
+    &:last-child {
+      margin: 0;
+    }
+  }
+
+  @media only screen
+    and (max-width: 78em) {
+      .progress-circle {
+        width: 33.33%;
+
+        &:nth-child(-n + 4) {
+          margin-bottom: 2rem;
+        }
+      }
+  }
+
+  @media only screen
+    and (max-width: 36em) {
+      .progress-circle {
+        width: 50%;
+
+        &:nth-child(-n + 4) {
+          margin-bottom: 2rem;
+        }
+      }
+  }
+}

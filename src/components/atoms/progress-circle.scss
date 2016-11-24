@@ -1,0 +1,35 @@
+.progress-circle {
+  display: inline-block;
+  position: relative;
+
+  svg {
+    display: block;
+    position: relative;
+    transform: rotate(-90deg);
+  }
+
+  .percentage {
+    position: absolute;
+    margin-top: -3rem;
+    top: 50%;
+    left: 0;
+    width: 11rem;
+    font-size: 3rem;
+    color: #FFFFFF;
+    text-align: center;
+
+    small {
+      font-size: 75%;
+    }
+  }
+
+  .title {
+    display: block;
+    margin-top: 1.5rem;
+    width: 11rem;
+    font-size: 1.4rem;
+    color: #FFF;
+    text-align: center;
+    text-transform: uppercase;
+  }
+}

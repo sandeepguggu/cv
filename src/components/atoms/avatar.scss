@@ -1,0 +1,13 @@
+.avatar {
+  display: inline-block;
+  padding: 0.5rem;
+  border: 1px solid #FFF;
+  border-radius: 100%;
+
+  img {
+    display: block;
+    width: 21.25rem;
+    height: 21.25rem;
+    border-radius: 100%;
+  }
+}

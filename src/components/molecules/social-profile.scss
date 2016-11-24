@@ -1,0 +1,12 @@
+.social-profile {
+  display: flex;
+  justify-content: center;
+
+  .social-icon {
+    margin-right: 1.8rem;
+
+    &:last-child {
+      margin: 0;
+    }
+  }
+}

@@ -1,0 +1,10 @@
+.diagonal-background {
+  width: 100%;
+  height: 6rem;
+  background: rgb(26, 188, 156);
+  background: linear-gradient(to right bottom, #FFFFFF 49.5%, rgb(26, 188, 156) 50%);
+
+  &.invert {
+    background: linear-gradient(to left bottom, rgb(26, 188, 156) 49.5%, #FFFFFF 50%);
+  }
+}
