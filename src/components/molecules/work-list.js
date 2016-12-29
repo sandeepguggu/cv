@@ -25,7 +25,7 @@ export default class WorkList extends React.Component {
             single page app for Calm.io - a complete application life cycle
             management tool for data centers with React, Flux, D3, SVG &
             Webpack." />
-        <Work from="Oct 13" to="May 13"
+        <Work from="Oct 12" to="May 13"
           employer="iStream"
           role="UI Developer"
           description="Part of a 4 people team which build UI for video
