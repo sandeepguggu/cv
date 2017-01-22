@@ -24,7 +24,7 @@ export default class School extends React.Component {
             <div className="degree">{degree}</div>
             <div className="name">{school}</div>
           </div>
-          <p className="description">
+          <p className="description" hidden>
             This is Photoshop's version Lorem Ipsum. Well, the way they make shows is, they make one show.
           </p>
         </div>
