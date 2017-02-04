@@ -1,0 +1,17 @@
+.work-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+
+  .work {
+    width: 50%;
+    padding: 1rem;
+  }
+
+  @media only screen
+  and (max-width: 26em) {
+    .work {
+      width: 100%;
+    }
+  }
+}

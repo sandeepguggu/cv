@@ -1,0 +1,20 @@
+.education {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+
+  .school-wrap {
+    width: 33.33%;
+    padding: 1rem;
+
+    @media only screen
+    and (max-width: 78em) {
+      width: 50%;
+    }
+
+    @media only screen
+    and (max-width: 52em) {
+      width: 100%;
+    }
+  }
+}

@@ -1,21 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Resume from 'templates/resume';
+import Lab from './lab';
+// const FOLDERS = ['atoms', 'molecules', 'organisms', 'templates'];
 
-import './base.scss';
 const render = (Component) => {
   ReactDOM.render(
-    <div>
-      <Component />
-    </div>,
+    <Component />,
     document.querySelector('#root')
   );
 };
-render(Resume);
+render(Lab);
 
 // Hot Module Replacement API
 if (module.hot) {
-  module.hot.accept('templates/resume', () => {
-    render(Resume);
+  module.hot.accept('./lab', () => {
+    render(Lab);
   });
 }

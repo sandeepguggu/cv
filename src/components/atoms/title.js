@@ -3,7 +3,7 @@ import React from 'react';
 import './title.scss';
 export default class Title extends React.Component {
   render() {
-    let name = "I'M SANDEEP";
+    let name = "I'M ANDEEP";
     let role = "UI DEVELOPER";
     return (
       <span className="title">

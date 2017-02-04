@@ -4,24 +4,35 @@ var srcPath = path.resolve(__dirname, '../src');
 
 module.exports = {
   module: {
-    loaders: [{
+    rules: [{
       test: /\.js$/,
-      loaders: ['babel'],
-      include: path.join(rootPath, 'src')
-    }, {
-      test: /\.js$/,
-      loaders: ['eslint-loader'],
+      use: [{
+        loader: 'babel-loader'
+      }, {
+        loader: 'eslint-loader'
+      }],
       include: path.join(rootPath, 'src')
     }, {
       test: /\.svg$/,
-      loaders: ['raw-loader'],
+      loader: 'raw-loader',
       include: path.join(rootPath, 'images')
     }, {
       test: /.*\.(gif|png|jpe?g)$/i,
-      loaders: [
-        'file?hash=sha512&digest=hex&name=[hash].[ext]',
-        'image-webpack?bypassOnDebug&optimizationLevel=7&interlaced=false'
-      ],
+      use: [{
+        loader: 'file-loader',
+        options: {
+          hash: 'sha512',
+          digest: 'hex',
+          name: '[hash].[ext]'
+        }
+      }, {
+        loader: 'image-webpack-loader',
+        query: {
+          bypassOnDebug: true,
+          optimizationLevel: 7,
+          interlaced: false
+        }
+      }],
       include: path.join(rootPath, 'images')
     }]
   },

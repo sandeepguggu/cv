@@ -5,9 +5,12 @@ var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var rootPath = path.resolve(__dirname, '../');
 var assetsPath = path.resolve(rootPath, './dist/www/static');
 
-config.module.loaders.push({
+config.module.rules.push({
   test: /\.scss$/,
-  loader: ExtractTextPlugin.extract('css!sass'),
+  loader: ExtractTextPlugin.extract({
+    fallbackLoader: 'style-loader',
+    loader: ['css-loader', 'sass-loader']
+  }),
   include: path.join(rootPath, 'src')
 });
 
@@ -22,7 +25,8 @@ config.output = {
 };
 
 config.plugins = [
-  new ExtractTextPlugin('style.css', {
+  new ExtractTextPlugin({
+    filename: 'style.css',
     allChunks: true
   }),
   new webpack.DefinePlugin({
@@ -34,13 +38,7 @@ config.plugins = [
     __DEVELOPMENT__: false,
     __DEVTOOLS__: false
   }),
-  new webpack.optimize.OccurenceOrderPlugin(),
-  new webpack.optimize.DedupePlugin(),
-  new webpack.optimize.UglifyJsPlugin({
-    compress: {
-      warnings: false
-    }
-  })
+  new webpack.optimize.UglifyJsPlugin()
 ];
 
 module.exports = config;
